@@ -12,9 +12,9 @@ func initializeRoutes(router *gin.Engine) {
 		cb.POST("/", controller.CreateBot)
 	}
 
-	eb := router.Group("/rajnikantBot/edit")
+	eb := router.Group("/rajnikantBot/manage")
 	{
-		eb.POST("/", controller.EditBot)
+		eb.POST("/", controller.ManageBot)
 	}
 
 	ab := router.Group("/rajnikantBot/addHandler")
