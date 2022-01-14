@@ -17,12 +17,12 @@ func CreateBot(ctx *gin.Context) {
 	ctx.JSON(200, strikeObj)
 }
 
-func EditBot(ctx *gin.Context) {
+func ManageBot(ctx *gin.Context) {
 	var request model.Request_Structure
 	if err := ctx.BindJSON(&request); err != nil {
 		fmt.Println("Error:", err)
 	}
-	strikeObj := core.EditBot(request)
+	strikeObj := core.ManageBot(request)
 	ctx.JSON(200, strikeObj)
 }
 func AddHandlerToBot(ctx *gin.Context) {
